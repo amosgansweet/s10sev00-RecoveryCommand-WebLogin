@@ -1,11 +1,8 @@
 #!/bin/bash
 
-USER=$(whoami)
-WORKDIR="/home/${USER}/.tneganz"
-FILE_PATH="/home/${USER}/.5sweb"
-CRON_S5="nohup ${FILE_PATH}/5sweb -c ${FILE_PATH}/config.json >/dev/null 2>&1 &"
-CRON_NEZHA="nohup ${WORKDIR}/start.sh >/dev/null 2>&1 &"
-SB10="/home/${USER}/restartsb.sh  >/dev/null 2>&1 &"
+CRON_S5="nohup $HOME/.5sweb/5sweb -c ${FILE_PATH}/config.json >/dev/null 2>&1 &"
+CRON_NEZHA="nohup $HOME/.tneganz/start.sh >/dev/null 2>&1 &"
+SB10="nohup $HOME/restartsb.sh  >/dev/null 2>&1 &"
 
 
 
