@@ -38,7 +38,7 @@ except json.JSONDecodeError:
 summary_message = "serv00-node 恢复操作结果：\n"
 
 # 默认恢复命令
-default_restore_command = "pgrep -x 's5' > /dev/null || nohup $HOME/.s5/s5 -c $HOME/.s5/config.json >/dev/null 2>&1 &"
+default_restore_command = "$HOME/checkweb.sh >/dev/null 2>&1 &"
 
 # 遍历服务器列表并执行恢复操作
 for server in servers:
