@@ -2,7 +2,7 @@ name: 恢复serv00上节点服务并发送Telegram消息
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # 每6天的00:00执行一次
+    - cron: '0 22 */11 * *'  # 每11天的22:00执行一次
   workflow_dispatch:
 
 jobs:
